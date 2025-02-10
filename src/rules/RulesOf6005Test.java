@@ -22,4 +22,16 @@ public class RulesOf6005Test {
         assertTrue("Expected true: self-written required code",
                 RulesOf6005.mayUseCodeInAssignment(true, false, true, true, true));
     }
+
+    @Test
+    public void testMayUseCodeInAssignment1() {
+        boolean result1 = RulesOf6005.mayUseCodeInAssignment(false, true, false, false, false);
+        System.out.println("Test Case 1 result: " + result1);
+        assertFalse("Expected false: un-cited publicly-available code", result1);
+
+        boolean result2 = RulesOf6005.mayUseCodeInAssignment(true, false, true, true, true);
+        System.out.println("Test Case 2 result: " + result2);
+        assertTrue("Expected true: self-written required code", result2);
+    }
+
 }

@@ -29,6 +29,15 @@ public class TurtleSoupTest {
         assertEquals(128.57, TurtleSoup.calculateRegularPolygonAngle(7), 0.01);
         assertEquals(108.0, TurtleSoup.calculateRegularPolygonAngle(5), 0.001);
     }
+    @Test
+    public void calculateRegularPolygonAngleTestLF() {
+        double tringleAngle = TurtleSoup.calculateRegularPolygonAngle(3);
+        System.out.println("TringleAngle: " + tringleAngle);
+        assertEquals(60,tringleAngle, 0.001);
+        double seventeenAngle = TurtleSoup.calculateRegularPolygonAngle(17);
+        System.out.println("seventeenAngle: " + seventeenAngle);
+        assertEquals(158.8235,seventeenAngle, 0.001);
+    }
 
     /**
      * Tests calculatePolygonSidesFromAngle.
